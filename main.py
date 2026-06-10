@@ -4,6 +4,7 @@ import pandas as pd
 from PIL import Image
 from loguru import logger
 import sys
+from pathlib import Path
 
 from fastapi import FastAPI, File, status
 from fastapi.responses import RedirectResponse
@@ -91,6 +92,21 @@ def perform_healthcheck():
     }
     '''
     return {'healthcheck': 'Everything OK!'}
+
+
+@app.get('/health')
+def health():
+    return {"status": "healthy", "model": "YOLOv8", "version": "1.0.0"}
+
+
+@app.get('/models')
+def list_models():
+    models_dir = Path("models")
+    if not models_dir.exists():
+        return []
+    pt_files = list(models_dir.rglob("*.pt"))
+    return [p.relative_to(models_dir).as_posix() for p in pt_files]
+
 
 
 ######################### Support Func #################################
