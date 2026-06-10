@@ -128,13 +128,14 @@ def add_bboxs_on_img(image: Image, predict: pd.DataFrame()) -> Image:
 ################################# Models #####################################
 
 
-def detect_sample_model(input_image: Image) -> pd.DataFrame:
+def detect_sample_model(input_image: Image, confidence: float = 0.25) -> pd.DataFrame:
     """
     Predict from sample_model.
     Base on YoloV8
 
     Args:
         input_image (Image): The input image.
+        confidence (float): Minimum confidence threshold.
 
     Returns:
         pd.DataFrame: DataFrame containing the object location.
@@ -145,6 +146,6 @@ def detect_sample_model(input_image: Image) -> pd.DataFrame:
         save=False,
         image_size=640,
         augment=False,
-        conf=0.5,
+        conf=confidence,
     )
     return predict

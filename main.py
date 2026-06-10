@@ -141,12 +141,13 @@ def crop_image_by_predict(image: Image, predict: pd.DataFrame(), crop_class_name
 
 
 @app.post("/img_object_detection_to_json")
-def img_object_detection_to_json(file: bytes = File(...)):
+def img_object_detection_to_json(file: bytes = File(...), confidence_threshold: float = 0.25):
     """
     Object Detection from an image.
 
     Args:
         file (bytes): The image file in bytes format.
+        confidence_threshold (float): Minimum confidence threshold (0-1).
     Returns:
         dict: JSON format containing the Objects Detections.
     """
@@ -157,7 +158,7 @@ def img_object_detection_to_json(file: bytes = File(...)):
     input_image = get_image_from_bytes(file)
 
     # Step 3: Predict from model
-    predict = detect_sample_model(input_image)
+    predict = detect_sample_model(input_image, confidence=confidence_threshold)
 
     # Step 4: Select detect obj return info
     # here you can choose what data to send to the result
@@ -172,12 +173,13 @@ def img_object_detection_to_json(file: bytes = File(...)):
     return result
 
 @app.post("/img_object_detection_to_img")
-def img_object_detection_to_img(file: bytes = File(...)):
+def img_object_detection_to_img(file: bytes = File(...), confidence_threshold: float = 0.25):
     """
     Object Detection from an image plot bbox on image
 
     Args:
         file (bytes): The image file in bytes format.
+        confidence_threshold (float): Minimum confidence threshold (0-1).
     Returns:
         Image: Image in bytes with bbox annotations.
     """
@@ -185,7 +187,7 @@ def img_object_detection_to_img(file: bytes = File(...)):
     input_image = get_image_from_bytes(file)
 
     # model predict
-    predict = detect_sample_model(input_image)
+    predict = detect_sample_model(input_image, confidence=confidence_threshold)
 
     # add bbox on image
     final_image = add_bboxs_on_img(image = input_image, predict = predict)
