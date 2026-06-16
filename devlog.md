@@ -12,3 +12,10 @@
 - ONNX export allows model to run without PyTorch dependency 
 - Half precision FP16 inference speeds up detection on GPU 
 - Batch inference processes multiple images in single forward pass 
+ 
+## 2026-06-20 
+### YOLOv8 Custom Dataset Training Notes 
+- Custom dataset needs images and labels in YOLO format 
+- Labels stored as txt files with class id and bounding box 
+- Roboflow used to annotate and export dataset in YOLO format 
+- data.yaml file defines train val test paths and class names 
