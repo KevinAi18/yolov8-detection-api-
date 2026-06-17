@@ -19,3 +19,10 @@
 - Labels stored as txt files with class id and bounding box 
 - Roboflow used to annotate and export dataset in YOLO format 
 - data.yaml file defines train val test paths and class names 
+ 
+## 2026-06-22 
+### YOLOv8 Inference Optimization Notes 
+- Confidence threshold filters out low quality detections 
+- NMS removes duplicate bounding boxes for same object 
+- IOU threshold controls how aggressively NMS removes boxes 
+- Tracking with BoT-SORT maintains object ID across video frames 
