@@ -26,3 +26,10 @@
 - NMS removes duplicate bounding boxes for same object 
 - IOU threshold controls how aggressively NMS removes boxes 
 - Tracking with BoT-SORT maintains object ID across video frames 
+ 
+## 2026-06-24 
+### YOLOv8 Segmentation Mode Notes 
+- YOLOv8 segmentation outputs pixel level masks for each object 
+- Mask head added on top of detection head in model architecture 
+- Instance segmentation distinguishes between same class objects 
+- Segmentation useful for medical imaging and autonomous driving 
