@@ -33,3 +33,10 @@
 - Mask head added on top of detection head in model architecture 
 - Instance segmentation distinguishes between same class objects 
 - Segmentation useful for medical imaging and autonomous driving 
+ 
+## 2026-06-27 
+### YOLOv8 Edge Deployment Notes 
+- YOLOv8 nano and small variants suited for edge device deployment 
+- OpenVINO export optimizes model for Intel CPU based edge devices 
+- CoreML export used for deploying detection model on iOS devices 
+- Quantization to INT8 reduces model size for embedded hardware 
