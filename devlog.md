@@ -40,3 +40,10 @@
 - OpenVINO export optimizes model for Intel CPU based edge devices 
 - CoreML export used for deploying detection model on iOS devices 
 - Quantization to INT8 reduces model size for embedded hardware 
+ 
+## 2026-06-29 
+### YOLOv8 Pose Estimation Notes 
+- YOLOv8 pose mode detects human keypoints like joints and limbs 
+- 17 keypoints predicted per detected person in standard COCO format 
+- Useful for fitness tracking and fall detection applications 
+- Keypoint confidence scores help filter unreliable pose predictions 
