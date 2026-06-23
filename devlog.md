@@ -47,3 +47,10 @@
 - 17 keypoints predicted per detected person in standard COCO format 
 - Useful for fitness tracking and fall detection applications 
 - Keypoint confidence scores help filter unreliable pose predictions 
+ 
+## 2026-07-01 
+### YOLOv8 Multi Camera Pipeline Notes 
+- Multi camera setup processes several video streams in parallel 
+- Threading used to handle concurrent camera feeds efficiently 
+- Results aggregated across cameras for unified detection dashboard 
+- RTSP protocol used to connect to IP camera streams directly 
