@@ -54,3 +54,10 @@
 - Threading used to handle concurrent camera feeds efficiently 
 - Results aggregated across cameras for unified detection dashboard 
 - RTSP protocol used to connect to IP camera streams directly 
+ 
+## 2026-07-04 
+### YOLOv8 Export Format Comparison Notes 
+- TorchScript export keeps compatibility within PyTorch ecosystem 
+- TFLite export needed for Android mobile app deployment 
+- Comparing inference speed across export formats on same hardware 
+- Choosing format depends on target deployment environment 
