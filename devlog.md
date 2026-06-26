@@ -61,3 +61,10 @@
 - TFLite export needed for Android mobile app deployment 
 - Comparing inference speed across export formats on same hardware 
 - Choosing format depends on target deployment environment 
+ 
+## 2026-07-06 
+### YOLOv8 Data Augmentation Notes 
+- Mosaic augmentation combines 4 images into one training sample 
+- Random flip and rotation improve model robustness to orientation 
+- HSV color jitter helps model generalize across lighting conditions 
+- Mixup blends two images to create harder training examples 
