@@ -68,3 +68,10 @@
 - Random flip and rotation improve model robustness to orientation 
 - HSV color jitter helps model generalize across lighting conditions 
 - Mixup blends two images to create harder training examples 
+ 
+## 2026-07-08 
+### YOLOv8 Active Learning Notes 
+- Active learning selects hardest examples for human annotation 
+- Low confidence predictions flagged for manual review and labeling 
+- New labeled data added back into training set for next iteration 
+- Reduces total annotation effort needed to reach target accuracy 
