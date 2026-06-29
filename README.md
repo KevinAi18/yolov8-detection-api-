@@ -166,4 +166,12 @@ for img_path, result in detections.items():
 1. **Service Decoupling & Polyglot Architecture**: Microservices shouldn't be locked into Python just because of a machine learning component. An HTTP REST wrapper allows frontend apps, Go API gateways, Node.js aggregators, or Rust workers to communicate with the model seamlessly.
 2. **Horizontal Scalability**: Inference is CPU and memory intensive. Placing the CV model in a separate microservice container allows you to scale it independently of your main application. If the main backend gets 10,000 req/sec but only 100 require image detection, you scale only the detection service, optimizing server costs.
 3. **Optimized Event Loops**: Direct local model execution can block asynchronous servers. Running the inference pipeline in an isolated ASGI process (FastAPI + Uvicorn) ensures network operations and multi-threading models run optimally without event-loop starvation.
-4. **Clean Resource Limits**: Operating systems can enforce strict CPU/RAM usage quotas on containers. Containing the model keeps a memory leak or memory spike from crashing the entire system.
+4. **Clean Resource Limits**: Operating systems can enforce strict CPU/RAM usage quotas on containers. Containing the model keeps a memory leak or memory spike from crashing the entire system. 
+## API Usage 
+ 
+Send a POST request to /detect with an image file to get back bounding boxes, class labels and confidence scores for each detected object. 
+ 
+## Supported Tasks 
+- Object detection 
+- Instance segmentation 
+- Pose estimation 
