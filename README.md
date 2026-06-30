@@ -181,3 +181,8 @@ Send a POST request to /detect with an image file to get back bounding boxes, cl
 2. Install dependencies from requirements.txt 
 3. Download pretrained YOLOv8 weights 
 4. Run the FastAPI server with uvicorn 
+ 
+## Roadmap 
+- Add support for real time video stream detection 
+- Build a simple web dashboard for visualizing results 
+- Add model versioning and A/B testing support 
