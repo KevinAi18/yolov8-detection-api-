@@ -175,3 +175,9 @@ Send a POST request to /detect with an image file to get back bounding boxes, cl
 - Object detection 
 - Instance segmentation 
 - Pose estimation 
+ 
+## Installation 
+1. Clone the repository 
+2. Install dependencies from requirements.txt 
+3. Download pretrained YOLOv8 weights 
+4. Run the FastAPI server with uvicorn 
