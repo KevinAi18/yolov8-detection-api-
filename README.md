@@ -192,3 +192,9 @@ Send a POST request to /detect with an image file to get back bounding boxes, cl
 - YOLOv8x achieves higher accuracy at the cost of inference speed 
 - API response time under 100ms for single image on modern GPU 
 - Batch processing reduces per image latency under high load 
+ 
+## License 
+This project is released under the MIT License. See the LICENSE file for details. 
+ 
+## Acknowledgements 
+Built on top of the Ultralytics YOLOv8 model and FastAPI framework. 
