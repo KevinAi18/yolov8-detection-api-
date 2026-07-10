@@ -198,3 +198,7 @@ This project is released under the MIT License. See the LICENSE file for details
  
 ## Acknowledgements 
 Built on top of the Ultralytics YOLOv8 model and FastAPI framework. 
+ 
+## FAQ 
+Q: Does this run on CPU only machines? 
+A: Yes, though inference is significantly slower without a GPU. 
