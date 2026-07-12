@@ -202,3 +202,8 @@ Built on top of the Ultralytics YOLOv8 model and FastAPI framework.
 ## FAQ 
 Q: Does this run on CPU only machines? 
 A: Yes, though inference is significantly slower without a GPU. 
+ 
+## Deployment Options 
+- Docker container for cloud or on-prem deployment 
+- ONNX export for cross platform inference without PyTorch 
+- Edge deployment via OpenVINO or TensorRT for optimized hardware 
