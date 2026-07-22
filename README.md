@@ -208,3 +208,6 @@ A: Yes, though inference is significantly slower without a GPU.
 - Docker container for cloud or on-prem deployment 
 - ONNX export for cross platform inference without PyTorch 
 - Edge deployment via OpenVINO or TensorRT for optimized hardware 
+ 
+## Design Philosophy 
+This API is built to be a thin, predictable wrapper around YOLOv8 so it stays easy to swap model weights or export formats without touching the API contract. 
