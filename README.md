@@ -211,3 +211,6 @@ A: Yes, though inference is significantly slower without a GPU.
  
 ## Design Philosophy 
 This API is built to be a thin, predictable wrapper around YOLOv8 so it stays easy to swap model weights or export formats without touching the API contract. 
+ 
+## Related Projects 
+Check out other projects in this portfolio for RAG, sentiment analysis, and fine-tuning work. 
